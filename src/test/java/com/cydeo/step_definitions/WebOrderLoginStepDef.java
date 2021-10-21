@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import static org.junit.Assert.*;
 
 public class WebOrderLoginStepDef {
+
     // putting this at class level, so it can be accessible in all methods
     WLoginPage loginPage ;
 
@@ -42,6 +43,7 @@ public class WebOrderLoginStepDef {
 
     }
 
+
     @When("we provide invalid credentials")
     public void weProvideInvalidCredentials() {
 
@@ -63,11 +65,11 @@ public class WebOrderLoginStepDef {
 
     }
 
+    @When("user provide username {string} and password {string}")
+    public void userProvideUsernameAndPassword(String username, String password) {
+        // username = "whatever provided from scenario step"
+        // password = "whatever provided from scenario step"
+        loginPage.login( username, password );
 
-
-
-
-
+    }
 }
-
-
